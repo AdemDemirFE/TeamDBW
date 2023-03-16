@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  subMenuActive = false;
+  subMenuOpen = false;
   constructor() {}
+
+  toggleSubMenu() {
+    this.subMenuActive = !this.subMenuActive;
+    this.subMenuOpen = !this.subMenuOpen;
+  }
 }

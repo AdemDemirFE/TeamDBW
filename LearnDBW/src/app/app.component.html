@@ -1,3 +1,105 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content" when="(min-width: 900px)" fixed>
+    <ion-menu side="start" contentId="main-content" type="push">
+      <ion-header>
+        <!-- <ion-toolbar>
+          <ion-title>
+            Menü
+          </ion-title>
+        </ion-toolbar> -->
+      </ion-header>
+      <ion-content>
+        <ion-list style="margin-top: 150px; text-align: center;">
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;">
+              Bootcamp
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;" [class.active-menu]="subMenuOpen">
+              Diğer Etkinlikler
+            </ion-label>
+            <ion-icon slot="end" name="chevron-down-outline" *ngIf="subMenuActive" [class.active-menu]="subMenuOpen"></ion-icon>
+            <ion-icon slot="end" name="chevron-forward-outline" *ngIf="!subMenuActive"></ion-icon>
+          </ion-item>
+          <ion-list *ngIf="subMenuActive" class="sub-menu">
+            <ion-item lines="none" class="sub-menu-item">
+              <ion-label style="text-align: center; color:#1d1d1d;">
+                Kariyer
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none" class="sub-menu-item">
+              <ion-label style="text-align: center; color:#1d1d1d;">
+                İş
+              </ion-label>
+            </ion-item>
+            <ion-item lines="none" class="sub-menu-item">
+              <ion-label style="text-align: center; color:#1d1d1d;">
+                Eğitim
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;">
+              İş İlanları
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;">
+              Senin İçin
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;">
+              Şirketler İçin
+            </ion-label>
+          </ion-item>
+          <ion-item lines="none" class="menu-item" (click)="toggleSubMenu()">
+            <ion-label style="text-align: center; color:#1d1d1d;">
+              Diğer
+            </ion-label>
+          </ion-item>
+          <ion-button color="success" style="background-color: #00c26d;
+          border-radius: 4px; 
+          border: 1px solid rgb(216, 216, 216);
+          width: 80%;
+          box-shadow: none;
+          font-weight: 500;
+          text-transform: initial;
+          letter-spacing: 0.025rem;
+          color: rgb(29, 29, 29);
+          background-color: rgb(255, 255, 255);
+          font-size: 0.875rem;
+          line-height: 1.5rem;"><b style="color: #ffffff;">Kayıt Ol</b>
+          </ion-button>
+          <ion-button color="light" style="background-color: #00c26d;
+          border-radius: 4px; 
+          border: 1px solid rgb(216, 216, 216);
+          width: 80%;
+          box-shadow: none;
+          font-weight: 500;
+          text-transform: initial;
+          letter-spacing: 0.025rem;
+          color: #1d1d1d;
+          background-color: rgb(255, 255, 255);
+          font-size: 0.875rem;
+          line-height: 1.5rem;"><b style="color: #1d1d1d;">Giriş Yap</b>
+          </ion-button>
+          <ion-toolbar>
+            <ion-buttons>
+              <ion-button fill="clear" shape="round" color="dark">
+                TR
+              </ion-button>
+              <div class="vertical-line"></div>
+              <ion-button fill="clear" shape="round" color="dark">
+                EN
+              </ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content">
+    </ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
