@@ -1,24 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button fill="clear" shape="round">
-        Bootcamp
-      </ion-button>
-      <ion-button fill="clear" shape="round">
-        Diğer Etkinlikler
-      </ion-button>
-      <ion-button fill="clear" shape="round">
-        İş İlanları
-      </ion-button>
-      <ion-button fill="clear" shape="round">
-        Senin İçin
-      </ion-button>
-      <ion-button fill="clear" shape="round">
-        Şirketler İçin
-      </ion-button>
-      <ion-button fill="clear" shape="round">
-        Diğer
-      </ion-button>
+      <ion-menu-button *ngIf="isMobile" style="margin-top: 10px;" class="menuBtn"></ion-menu-button>     
+      <ng-container *ngIf="!isMobile">
+        <ion-button fill="clear" shape="round">
+          Bootcamp
+        </ion-button>
+        <ion-button fill="clear" shape="round">
+          Diğer Etkinlikler
+        </ion-button>
+        <ion-button fill="clear" shape="round">
+          İş İlanları
+        </ion-button>
+        <ion-button fill="clear" shape="round">
+          Senin İçin
+        </ion-button>
+        <ion-button fill="clear" shape="round">
+          Şirketler İçin
+        </ion-button>
+        <ion-button fill="clear" shape="round">
+          Diğer
+        </ion-button>
+      </ng-container>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button color="success" shape="round">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  menuOpen = false;
+  isMobile: boolean = false;
+  constructor() {
+    this.checkScreenSize();
+  }
+  @HostListener('window:resize', ['$event'])
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+  
+  onResize(event: any) {
+    this.checkScreenSize();
+  }
 
-  constructor() {}
+  
 
+  checkScreenSize() {
+    this.isMobile = (screen.width < 900) ? true : false;
+    debugger
+  }
 }
