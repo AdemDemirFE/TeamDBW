@@ -9,21 +9,52 @@
         <ion-button fill="clear" shape="round">
           Bootcamp
         </ion-button>
-        <ion-button fill="clear" shape="round">
-          Diğer Etkinlikler
-        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOtherEvents = !isDropdownOtherEvents"
+            [color]="isDropdownOtherEvents ? 'success' : ''">
+            Diğer Etkinlikler
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOtherEvents">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round">Hackathon</ion-button>
+              <ion-button fill="clear" shape="round">Hiring Challange</ion-button>
+              <ion-button fill="clear" shape="round">Tüm Etkinlikler</ion-button>
+            </div>
+          </ng-container>
+        </div>
         <ion-button fill="clear" shape="round">
           İş İlanları
         </ion-button>
-        <ion-button fill="clear" shape="round">
-          Senin İçin
-        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOpenForYou = !isDropdownOpenForYou"
+            [color]="isDropdownOpenForYou ? 'success' : ''">
+            Senin İçin
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOpenForYou">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round">Podcast</ion-button>
+              <ion-button fill="clear" shape="round">Blog</ion-button>
+            </div>
+          </ng-container>
+        </div>
         <ion-button fill="clear" shape="round">
           Şirketler İçin
         </ion-button>
-        <ion-button fill="clear" shape="round">
-          Diğer
-        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOther = !isDropdownOther"
+            [color]="isDropdownOther ? 'success' : ''">
+            Diğer
+            <ion-icon name="chevron-down-outline"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOther">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round">Hakkımızda</ion-button>
+              <ion-button fill="clear" shape="round">Eğitmen Ol</ion-button>
+            </div>
+          </ng-container>
+        </div>
       </ng-container>
 
     </ion-buttons>
@@ -37,7 +68,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;">Giriş Yap</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;"
+    [routerLink]="['/login']">{{ 'LOGIN.REGISTER' | translate }}</b>
     </ion-button>
     <ion-button color="success" style="
     border-radius: 4px; 
@@ -48,9 +80,10 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #ffffff;">Kayıt Ol</b>
+    line-height: 1.5rem;"
+    [routerLink]="['/register']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' | translate }}</b>
     </ion-button>
-    <ion-button *ngIf="account" fill="outline" color="light" style="
+    <ion-button *ngIf="account.username != ''" fill="outline" color="light" style="
     background-color: rgb(255, 255, 255);
     border-radius: 4px; 
     width: 100px;
@@ -112,19 +145,19 @@
     <div style="max-width: 1200px; margin: auto;">
       <ion-slides pager="false" [options]="slideOptsThree" #slideWithNav3>
         <ion-slide>
-          <img style="max-height: 150px;" src="assets/logo/logo-black.png">
+          <img style="max-height: 100px;" src="assets/logo/logo-white.png">
         </ion-slide>
         <ion-slide>
-          <img style="max-height: 150px;" src="assets/logo/logo-black.png">
+          <img style="max-height: 100px;" src="assets/logo/logo-black.png">
         </ion-slide>
         <ion-slide>
-          <img style="max-height: 150px;" src="assets/logo/logo-black.png">
+          <img style="max-height: 100px;" src="assets/logo/logo-no-background.png">
         </ion-slide>
         <ion-slide>
-          <img style="max-height: 150px;" src="assets/logo/logo-black.png">
+          <img style="max-height: 100px;" src="assets/logo/logo-black.png">
         </ion-slide>
         <ion-slide>
-          <img style="max-height: 150px;" src="assets/logo/logo-black.png">
+          <img style="max-height: 100px;" src="assets/logo/logo-white.png">
         </ion-slide>
       </ion-slides>
     </div>
@@ -259,7 +292,7 @@
       </ion-card-header>
       <ion-row>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px;">
+          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b1.png">
             <h3 style="
             font-size: 1.125rem;
@@ -275,11 +308,11 @@
             -webkit-box-orient: vertical;">
               Learn Masters Bootcamp Program
             </h3>
-            <p>Ücretsiz öğren, mezun ol, çalışmaya başla.</p>
+            <p style="text-align: justify;">Ücretsiz öğren, mezun ol, çalışmaya başla.</p>
           </ion-card>
         </ion-col>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px;">
+          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b2.png">
             <h3 style="
             font-size: 1.125rem;
@@ -295,12 +328,12 @@
             -webkit-box-orient: vertical;">
               Kendini kanıtla
             </h3>
-            <p>Bootcamp, Hackathon ve Hiring Challenge etkinliklerine katılarak hem becerilerini geliştirecek hem de
+            <p style="text-align: justify;">Bootcamp, Hackathon ve Hiring Challenge etkinliklerine katılarak hem becerilerini geliştirecek hem de
               ödül kazanma fırsatı yakalayacaksın..</p>
           </ion-card>
         </ion-col>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px;">
+          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b3.png">
             <h3 style="
             font-size: 1.125rem;
@@ -316,7 +349,7 @@
             -webkit-box-orient: vertical;">
               İş fırsatı yakala
             </h3>
-            <p>Sektöründe lider teknoloji şirketleriyle tanışacak ve iş fırsatları yakalayacaksın.</p>
+            <p style="text-align: justify;">Sektöründe lider teknoloji şirketleriyle tanışacak ve iş fırsatları yakalayacaksın.</p>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -337,11 +370,11 @@
       color: #1D1D1D;">Bizi Katılımcılarımızdan Dinle</ion-card-title>
       </ion-card-header>
       <ion-slides pager="true" [options]="slideOpts4">
-        <ion-slide style=" padding: 10px; min-width: 350px;">
-          <ion-card style="text-align: left; width: 400px; margin: auto; padding: 10px;">
+        <ion-slide style=" padding: 10px; min-width: 350px;  ">
+          <ion-card style="text-align: left;  height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <ion-row>
-              <ion-col size="4">
-                <img style=" max-width: 250px;" src="assets/img/b1.png">
+              <ion-col size="4" style="margin: auto;">
+                <img style="max-width: 250px;" src="assets/img/b1.png">
               </ion-col>
               <ion-col size="8">
                 <h3 style="
@@ -350,7 +383,7 @@
                 letter-spacing: 0.15px;
                 line-height: 1.4;
                 font-family: Roboto,sans-serif;
-                color: #1D1D1D;
+                color: #00c26d;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -358,7 +391,7 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p>Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir
+                <p style="text-align: justify;">Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir
                   programdı. Bir çok şey öğrenmenin yanında bootcamp’e katılan farklı ve donanımlı insanlarla tanışma
                   fırsatım oldu. Geriye bakıp düşününce iyi ki katılmışım dediğim bir bootcamp’ti benim için. Emeği
                   geçen herkese teşekkürler 😂.</p>
@@ -367,9 +400,9 @@
           </ion-card>
         </ion-slide>
         <ion-slide style=" padding: 10px; min-width: 350px;">
-          <ion-card style="text-align: left; width: 400px; margin: auto; padding: 10px;">
+          <ion-card style="text-align: left; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <ion-row>
-              <ion-col size="4">
+              <ion-col size="4" style="margin: auto;">
                 <img style=" max-width: 250px;" src="assets/img/b1.png">
               </ion-col>
               <ion-col size="8">
@@ -379,7 +412,7 @@
                 letter-spacing: 0.15px;
                 line-height: 1.4;
                 font-family: Roboto,sans-serif;
-                color: #1D1D1D;
+                color: #00c26d;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -387,18 +420,15 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p>Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir
-                  programdı. Bir çok şey öğrenmenin yanında bootcamp’e katılan farklı ve donanımlı insanlarla tanışma
-                  fırsatım oldu. Geriye bakıp düşününce iyi ki katılmışım dediğim bir bootcamp’ti benim için. Emeği
-                  geçen herkese teşekkürler 😂.</p>
+                <p  style="text-align: justify;">Back-End Bootcamp ile çok eğlenceli ve bilgi dolu bir süreç geçirdim. Bu süreçte eğlendim, arkadaşlıklar edindim ve sektöre yönelik bir çok deneyim kazandım. Hem eğitmenimizin hem de techcareer ekibinin ilgisi ise oldukça yüksekti. Ayrıca bootcamp sonunda ise istediğim pozisyonda işe başladım. Kısacası kariyerimin başında büyük bir etkisi olan çok güzel bir dönem geçirdim diyebilirim. Tüm techcareer.net ekibine teşekkürler.</p>
               </ion-col>
             </ion-row>
           </ion-card>
         </ion-slide>
         <ion-slide style=" padding: 10px; min-width: 350px;">
-          <ion-card style="text-align: left; width: 400px; margin: auto; padding: 10px;">
+          <ion-card style="text-align: left;  height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <ion-row>
-              <ion-col size="4">
+              <ion-col size="4" style="margin: auto;">
                 <img style=" max-width: 250px;" src="assets/img/b1.png">
               </ion-col>
               <ion-col size="8">
@@ -408,7 +438,7 @@
                 letter-spacing: 0.15px;
                 line-height: 1.4;
                 font-family: Roboto,sans-serif;
-                color: #1D1D1D;
+                color: #00c26d;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
@@ -416,10 +446,7 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p>Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir
-                  programdı. Bir çok şey öğrenmenin yanında bootcamp’e katılan farklı ve donanımlı insanlarla tanışma
-                  fırsatım oldu. Geriye bakıp düşününce iyi ki katılmışım dediğim bir bootcamp’ti benim için. Emeği
-                  geçen herkese teşekkürler 😂.</p>
+                <p  style="text-align: justify;">Değerlendirme aşamasından Bootcamp final sunumuna kadar geçen her an çok keyifli ve verimliydi. Çok şey öğrendiğim ve öğrendiklerimi uygulama fırsatı bulduğum dolu dolu bir 6 hafta geçirdim..</p>
               </ion-col>
             </ion-row>
           </ion-card>
@@ -450,7 +477,7 @@
             -webkit-box-orient: vertical;">
               Bootcamp
             </h3>
-            <p>Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün yönetimi gibi teknolojik konularda
+            <p style="text-align: justify;">Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün yönetimi gibi teknolojik konularda
               düzenlenir. Hem eğitim alabilir, hem de o alanda işe başlayabilecek kadar fazla bilgi ve donanım
               kazanabilirsin.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
@@ -476,7 +503,7 @@
             -webkit-box-orient: vertical;">
               Hackathon
             </h3>
-            <p>Hackathon etkinliklerinde takımlar halinde veya bireysel olarak yarışacaksın. Etkinlik için belli bir
+            <p style="text-align: justify;">Hackathon etkinliklerinde takımlar halinde veya bireysel olarak yarışacaksın. Etkinlik için belli bir
               zaman verilir ve yeni fikirler, yeni dijital ürünler üretmesi, sonra da bunları kodlaması istenir.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
               <strong>Hemen Katılın</strong>
@@ -501,7 +528,7 @@
             -webkit-box-orient: vertical;">
               Hiring Challenge
             </h3>
-            <p>Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod hatası gibi problemleri belirli bir
+            <p style="text-align: justify;">Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod hatası gibi problemleri belirli bir
               zaman aralığı içerisinde çözmeye çalışacaksın. Bu yarışmalarda algoritma tasarımına, özgünlüğe ve kod
               kalitesine göre puan alırsın.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
@@ -543,8 +570,8 @@
     <div style="max-width: 1200px; margin: auto;">
       <ion-row>
         <ion-col style="text-align: center;">
-          <h2>TECHCAREER</h2>
-          <ion-button expand="block" fill="clear" shape="round">Bakkımızda</ion-button>
+          <h2>CAREER FOR DUMMIES</h2>
+          <ion-button expand="block" fill="clear" shape="round">Hakkımızda</ion-button>
           <ion-button expand="block" fill="clear" shape="round">Etkinlikler</ion-button>
           <ion-button expand="block" fill="clear" shape="round">İşverenler</ion-button>
           <ion-button expand="block" fill="clear" shape="round">Eğitmen ol</ion-button>
@@ -578,12 +605,12 @@
     <div style="max-width: 1100px; margin: auto;">
       <ion-row>
         <ion-col size="3">
-          <ion-buttons style="text-align: center;">
-            <ion-button fill="clear" shape="round" color="dark">
+          <ion-buttons style="text-align: center;" >
+            <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('tr')">
               TR
             </ion-button>
             <div class="vertical-line"></div>
-            <ion-button fill="clear" shape="round" color="dark">
+            <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('en')">
               EN
             </ion-button>
           </ion-buttons>

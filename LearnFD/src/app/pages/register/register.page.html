@@ -1,0 +1,45 @@
+
+<ion-content class="background-color">
+
+  <ion-grid class="middle_conn">
+    <ion-list>
+      <div style="text-align: center;" [routerLink]="['/home']">
+        <img style="width:  150px; height: auto;" src="assets/logo/logo-no-background.png">
+        <ion-label style="display: block; color: #1d1d1d; font-weight: bold;">Geri Dön</ion-label>
+      </div>
+      <ion-item-group style="margin-top: 10px;">
+        <ion-item class="form-input">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-input type="text" [(ngModel)]="userName" placeholder="{{ 'REGISTER.USERNAME' | translate }}" clearInput required="true"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-input">
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-input type="email" [(ngModel)]="email" placeholder="{{ 'REGISTER.EMAIL' | translate }}" clearInput required="true"></ion-input>
+        </ion-item>
+
+        <ion-item class="form-input">
+          <ion-icon name="key" slot="start"></ion-icon>
+          <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" placeholder="{{ 'REGISTER.PASSWORD' | translate }}" clearInput required="true"></ion-input>
+          <ion-icon name="eye" slot="end" color="{{ showPassword ? 'success' : 'medium' }}" style="cursor: pointer;" (click)="togglePasswordVisibility()"></ion-icon>
+      </ion-item>
+
+        <ion-item class="form-input">
+          <ion-icon name="key" slot="start"></ion-icon>
+          <ion-input type="{{ showPasswordReapat ? 'text' : 'password' }}" [(ngModel)]="passwordRepeat" placeholder="{{ 'REGISTER.PASSWORD_REPEAT' | translate }}" clearInput required="true"></ion-input>
+          <ion-icon name="eye" slot="end" color="{{ showPasswordReapat ? 'success' : 'medium' }}" style="cursor: pointer;" (click)="togglePasswordRepeatVisibility()"></ion-icon>
+        </ion-item>
+
+        <ion-item *ngIf="password !== passwordRepeat" color="danger" style="border-radius: 10px;">
+          <ion-label style="color: #ffffff; white-space: normal;">{{ 'REGISTER.PASSWORDS_DO_NOT_MATCH' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-button [disabled]="email == '' || userName == '' || password == '' || passwordRepeat == '' || password != passwordRepeat" class="signUp-button" fill="solid" expand="block" (click)="register()">{{ 'REGISTER.REGISTER' | translate }}</ion-button>
+        <ion-button class="girisButton" fill="clear" (click)="login()"><ion-label style="color: rgb(136, 136, 136);;">{{ 'REGISTER.I_HAVE_ACCOUNT' | translate }} </ion-label>&nbsp;{{ 'REGISTER.LOGIN' | translate }}</ion-button>
+       
+      </ion-item-group>
+    </ion-list>
+
+  </ion-grid>
+
+</ion-content>

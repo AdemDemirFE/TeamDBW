@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import { TranslateService } from '@ngx-translate/core';
+import { GeneralSettings, account } from './pages';
+import { Langs } from './pages/select-lang/lang';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,11 +18,22 @@ export class AppComponent {
   subMenuActiveDiger: boolean = false;
   subMenuOpenDiger: boolean = false;
 
-  isMobile: boolean = false;
-  account: boolean = false;
 
-  constructor() {
+  isDropdownOtherEvents = false;
+  isDropdownOpenForYou = false;
+  isDropdownOther = false;
+  
+  isMobile: boolean = false;
+  languages = Langs;
+  type = 0;
+
+  account = account;
+  settings = GeneralSettings;
+  constructor(
+    public translate: TranslateService
+  ) {
     this.checkScreenSize();
+    this.initTranslate()
   }
 
   toggleSubMenuEtkinlikler() {
@@ -39,5 +52,46 @@ export class AppComponent {
   
   checkScreenSize() {
     this.isMobile = (screen.width < 900) ? true : false;
+  }
+
+  initTranslate() {
+    try {
+      let dil = localStorage.getItem('selectLang');
+      if (this.translate.currentLang != undefined) {
+        if (this.translate.currentLang != dil) {
+          if (dil == null) {
+            dil = GeneralSettings.dil;
+          }
+          this.translate.use(dil);
+          this.translate.setDefaultLang(dil);
+        }
+      } else {
+        if (dil != null) {
+          this.translate.use(dil)
+          this.translate.setDefaultLang(dil);
+        }
+        else {
+          this.translate.use(GeneralSettings.dil)
+          this.translate.setDefaultLang(GeneralSettings.dil);
+        }
+      }
+    } catch (error) {
+      this.translate.use(GeneralSettings.dil)
+      this.translate.setDefaultLang(GeneralSettings.dil);
+    }
+  }
+
+  changeLanguage(code: any) {
+    debugger;
+
+    this.translate.setDefaultLang(code);
+    this.translate.use(code);
+    localStorage.setItem('selectLang', code);
+    this.settings.dil = code;
+    if (code === 'ar') {
+      document.documentElement.dir = 'rtl';
+    } else {
+      document.documentElement.dir = 'ltr';
+    }
   }
 }

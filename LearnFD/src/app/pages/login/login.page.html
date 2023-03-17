@@ -1,0 +1,56 @@
+<ion-content>
+  <ion-grid class="middle_conn">
+    <ion-list>
+      <div style="text-align: center;" [routerLink]="['/home']">
+        <img style="width:  150px; height: auto;" src="assets/logo/logo-no-background.png">
+        <ion-label style="display: block; color: #1d1d1d; font-weight: bold;">Geri Dön</ion-label>
+      </div>
+      <ion-item class="form-input">
+        <ion-input type="text" [(ngModel)]="username" placeholder="{{ 'LOGIN.USERNAME' | translate }}" clearInput required="true"></ion-input>
+      </ion-item>
+      <ion-item class="form-input">
+        <ion-input type="{{ showPassword ? 'text' : 'password' }}" [(ngModel)]="password" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" clearInput required="true"></ion-input>
+        <ion-icon name="eye" slot="end" color="{{ showPassword ? 'success' : 'medium' }}" style="cursor: pointer;" (click)="togglePasswordVisibility()"></ion-icon>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label style="color: #1d1d1d; font-weight: bold;">{{ 'LOGIN.REMEMBER_ME' | translate }}</ion-label>
+        <ion-checkbox slot="end" [(ngModel)]="rememberMe"></ion-checkbox>
+      </ion-item>
+      <ion-item lines="none">
+        <a slot="start" style="color: #00c26d;" (click)="forgetPassword()">{{ 'LOGIN.FORGET_PASSWORD' | translate }}</a>
+        <ion-button slot="end" fill="clear" style="color: #1d1d1d;" [routerLink]="['/register']">
+          {{ 'LOGIN.REGISTER' | translate }}
+        </ion-button>
+      </ion-item>
+
+      <ion-button class="girisButton" fill="clear" expand="block" (click)="doLogin()" [routerLink]="['/home']">{{ 'LOGIN.LOGIN' | translate }}</ion-button>
+      
+      <ion-row>
+        <ion-col size="6">
+          <ion-button class="GooglegirisButton" fill="clear" expand="block" #loginRef>
+            <ion-icon slot="start" name="logo-google"></ion-icon> &nbsp; {{ 'LOGIN.GOOGLE' | translate }}
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button class="GooglegirisButton" fill="clear" expand="block" #loginRef>
+            <ion-icon slot="start" name="logo-github"></ion-icon> &nbsp; {{ 'LOGIN.GITHUB' | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-item (click)="privicyPolicy()" style="text-align: center; margin-top: 5px;" lines="none">
+        <ion-label style="color: #1d1d1d; font-weight: bold;">{{'LOGIN.PRIVACY_POLICY' | translate }}</ion-label>
+      </ion-item>     
+      
+      <ion-item style="text-align: center; margin-top: -15px;" lines="none">
+        <ion-label style="color: #1d1d1d; font-size: smaller;">v1.1.1</ion-label>
+      </ion-item>    
+    </ion-list>
+  </ion-grid>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="changeLangue()" size="small" style="--background: #00c26d; margin-top: 10px;">
+      <ion-icon name="globe"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
