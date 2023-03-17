@@ -24,6 +24,5 @@ export class HomePage {
 
   checkScreenSize() {
     this.isMobile = (screen.width < 900) ? true : false;
-    debugger
   }
 }

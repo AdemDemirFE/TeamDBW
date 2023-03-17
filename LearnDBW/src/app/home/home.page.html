@@ -1,8 +1,11 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar style="text-align: center; margin: 0 auto; max-width: 1200px; justify-content: center;">
     <ion-buttons slot="start">
-      <ion-menu-button *ngIf="isMobile" style="margin-top: 10px;" class="menuBtn"></ion-menu-button>     
-      <ng-container *ngIf="!isMobile">
+      <ion-menu-button *ngIf="isMobile" style="margin-top: 10px;" class="menuBtn"></ion-menu-button>
+      <div style="text-align: center;">
+        <img style="width:  260px;" src="assets/logo/learn-dbw-logo.png">
+      </div>
+      <ng-container *ngIf="!isMobile" style="text-align: center; justify-content: center; align-items: center;">
         <ion-button fill="clear" shape="round">
           Bootcamp
         </ion-button>
@@ -24,11 +27,28 @@
       </ng-container>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button color="success" shape="round">
-        Kayıt Ol
+      <ion-button  fill="outline" color="light" style="
+        background-color: rgb(255, 255, 255);
+        border-radius: 4px; 
+        width: 80%;
+        box-shadow: none;
+        font-weight: 500;
+        text-transform: initial;
+        letter-spacing: 0.025rem;
+        color: #1d1d1d;
+        font-size: 0.875rem;
+        line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;">Giriş Yap</b>
       </ion-button>
-      <ion-button fill="outline" shape="round">
-        Giriş Yap
+      <ion-button color="success"  shape="round" style="background-color: #00c26d;
+      border-radius: 4px; 
+      width: 80%;
+      box-shadow: none;
+      font-weight: 500;
+      text-transform: initial;
+      letter-spacing: 0.025rem;
+      color: #1d1d1d;
+      font-size: 0.875rem;
+      line-height: 1.5rem;"><b style="margin:10px; color: #ffffff;">Kayıt Ol</b>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>

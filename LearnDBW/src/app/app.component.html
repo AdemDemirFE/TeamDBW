@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content"  fixed>
-    <ion-menu side="start" contentId="main-content" type="push">
+    <ion-menu side="start" contentId="main-content" type="push" *ngIf="isMobile">
       <ion-header>
         <!-- <ion-toolbar>
           <ion-title>
@@ -66,8 +66,8 @@
           font-weight: 500;
           text-transform: initial;
           letter-spacing: 0.025rem;
-          color: rgb(29, 29, 29);
-          background-color: rgb(255, 255, 255);
+          color: #1d1d1d;
+          background-color: #ffffff;
           font-size: 0.875rem;
           line-height: 1.5rem;"><b style="color: #ffffff;">Kayıt Ol</b>
           </ion-button>
@@ -79,7 +79,7 @@
           text-transform: initial;
           letter-spacing: 0.025rem;
           color: #1d1d1d;
-          background-color: rgb(255, 255, 255);
+          background-color: #ffffff;
           font-size: 0.875rem;
           line-height: 1.5rem;"><b style="color: #1d1d1d;">Giriş Yap</b>
           </ion-button>
