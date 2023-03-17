@@ -52,6 +52,15 @@ export class HomePage {
       
     }
   };
+  slideOpts4 = {
+    initialSlide: 0,
+    slidesPerView: 2,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      loop: true,
+    }
+  };
   sliderThree: any;
 
   constructor() {
@@ -71,46 +80,5 @@ export class HomePage {
   checkScreenSize() {
     this.isMobile = (screen.width < 900) ? true : false;
   }
-
-
-
-
-   //Move to Next slide
-   slideNext(object:any, slideView:any) {
-    slideView.slideNext(500).then(() => {
-      this.checkIfNavDisabled(object, slideView);
-    });
-  }
-
-  //Move to previous slide
-  slidePrev(object:any, slideView:any) {
-    slideView.slidePrev(500).then(() => {
-      this.checkIfNavDisabled(object, slideView);
-    });;
-  }
-
-  //Method called when slide is changed by drag or navigation
-  SlideDidChange(object:any, slideView:any) {
-    this.checkIfNavDisabled(object, slideView);
-  }
-
-  //Call methods to check if slide is first or last to enable disbale navigation  
-  checkIfNavDisabled(object:any, slideView:any) {
-    this.checkisBeginning(object, slideView);
-    this.checkisEnd(object, slideView);
-  }
-
-  checkisBeginning(object:any, slideView:any) {
-    slideView.isBeginning().then((istrue: any) => {
-      object.isBeginningSlide = istrue;
-    });
-  }
-  checkisEnd(object:any, slideView:any) {
-    slideView.isEnd().then((istrue: any) => {
-      object.isEndSlide = istrue;
-    });
-  }
-
-
 
 }
