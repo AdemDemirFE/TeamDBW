@@ -9,6 +9,7 @@ export class AppComponent {
   subMenuActive: boolean = false;
   subMenuOpen: boolean = false;
   isMobile: boolean = false;
+  account: boolean = false;
 
   constructor() {
     this.checkScreenSize();

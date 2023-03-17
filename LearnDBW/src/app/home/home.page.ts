@@ -8,6 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class HomePage {
   menuOpen = false;
   isMobile: boolean = false;
+  account: boolean = false;
   constructor() {
     this.checkScreenSize();
   }
