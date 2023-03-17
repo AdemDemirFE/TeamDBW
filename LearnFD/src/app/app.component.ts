@@ -6,8 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  subMenuActive: boolean = false;
-  subMenuOpen: boolean = false;
+  subMenuActiveEtkinlik: boolean = false;
+  subMenuOpenEtkinlik: boolean = false;
+
+  subMenuActiveSeninIcin: boolean = false;
+  subMenuOpenSeninIcin: boolean = false;
+
+  
+  subMenuActiveDiger: boolean = false;
+  subMenuOpenDiger: boolean = false;
+
   isMobile: boolean = false;
   account: boolean = false;
 
@@ -15,10 +23,20 @@ export class AppComponent {
     this.checkScreenSize();
   }
 
-  toggleSubMenu() {
-    this.subMenuActive = !this.subMenuActive;
-    this.subMenuOpen = !this.subMenuOpen;
+  toggleSubMenuEtkinlikler() {
+    this.subMenuActiveEtkinlik = !this.subMenuActiveEtkinlik;
+    this.subMenuOpenEtkinlik = !this.subMenuOpenEtkinlik;
   }
+
+  toggleSubMenuSeninIcin() {
+    this.subMenuActiveSeninIcin = !this.subMenuActiveSeninIcin;
+    this.subMenuOpenSeninIcin = !this.subMenuOpenSeninIcin;
+  }
+  toggleSubMenuDiger() {
+    this.subMenuActiveDiger = !this.subMenuActiveDiger;
+    this.subMenuOpenDiger = !this.subMenuOpenDiger;
+  }
+  
   checkScreenSize() {
     this.isMobile = (screen.width < 900) ? true : false;
   }
