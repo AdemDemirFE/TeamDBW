@@ -4,9 +4,9 @@
       <ion-content>
         <ion-list style="margin-top: 100px; text-align: center;">
           <div style="text-align: center;">
-            <img style="width:  150px;" src="assets/logo/logo-no-background.png">
+            <img [routerLink]="['/home']" style="width:  150px;" src="assets/logo/logo-no-background.png">
           </div>
-          <ion-button fill="clear" shape="round">
+          <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
             Bootcamp
           </ion-button>
           <div style="position: relative;">

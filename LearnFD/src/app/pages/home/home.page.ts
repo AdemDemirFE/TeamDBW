@@ -9,7 +9,6 @@ import { Langs } from 'src/app/pages/select-lang/lang';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  menuOpen = false;
   isMobile: boolean = false;
   account = account;
   settings = GeneralSettings;
@@ -26,7 +25,6 @@ export class HomePage {
       loop: true
     }
   };
-  
   slideOpts2 = {
     autoplay: {
       delay: 4000,
@@ -43,7 +41,6 @@ export class HomePage {
       spaceBetween: 25,
     }
   };
-
   slideOptsThree = {
     initialSlide: 0,
     slidesPerView: 3,
@@ -80,17 +77,12 @@ export class HomePage {
     this.checkScreenSize();
   }
   @HostListener('window:resize', ['$event'])
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
   
   onResize(event: any) {
     this.checkScreenSize();
   }
 
   changeLanguage(code: any) {
-    debugger;
-
     this.translate.setDefaultLang(code);
     this.translate.use(code);
     localStorage.setItem('selectLang', code);

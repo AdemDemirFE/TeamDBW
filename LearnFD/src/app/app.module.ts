@@ -12,11 +12,24 @@ import { TranslateConfigService } from './translate-config.service';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { C_Utils } from '../providers/utils';
 import { Service } from 'src/providers/service/service';
+import { HeaderComponent } from './components/header/header.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 @NgModule({
-  declarations: [AppComponent],
+  entryComponents: [HeaderComponent],
+
+  declarations: [
+    AppComponent,
+    HeaderComponent
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 

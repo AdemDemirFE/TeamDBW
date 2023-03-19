@@ -82,8 +82,6 @@ export class AppComponent {
   }
 
   changeLanguage(code: any) {
-    debugger;
-
     this.translate.setDefaultLang(code);
     this.translate.use(code);
     localStorage.setItem('selectLang', code);
