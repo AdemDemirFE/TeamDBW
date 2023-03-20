@@ -7,54 +7,54 @@
             <img [routerLink]="['/home']" style="width:  150px;" src="assets/logo/logo-no-background.png">
           </div>
           <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
-            Bootcamp
+            {{'HEADER.BOOTCAMP' | translate}}
           </ion-button>
           <div style="position: relative;">
             <ion-button fill="clear" shape="round" (click)="isDropdownOtherEvents = !isDropdownOtherEvents"
               [color]="isDropdownOtherEvents ? 'success' : ''">
-              Diğer Etkinlikler
+              {{'HEADER.OTHER_EVENTS' | translate}}
               <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOtherEvents"></ion-icon>
               <ion-icon name="chevron-down-outline" *ngIf="isDropdownOtherEvents"></ion-icon>,
             </ion-button>
             <ng-container *ngIf="isDropdownOtherEvents">
               <div style=" left: 0; width: 100%; z-index: 1;">
-                <ion-button fill="clear" expand="block" color="success">Hackathon</ion-button>
-                <ion-button fill="clear" expand="block" color="success">Hiring Challange</ion-button>
-                <ion-button fill="clear" expand="block" color="success">Tüm Etkinlikler</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' | translate}}</ion-button>
               </div>
             </ng-container>
           </div>
           <ion-button fill="clear" shape="round">
-            İş İlanları
+            {{'HEADER.JOBS' | translate}}
           </ion-button>
           <div style="position: relative;">
             <ion-button fill="clear" shape="round" (click)="isDropdownOpenForYou = !isDropdownOpenForYou"
               [color]="isDropdownOpenForYou ? 'success' : ''">
-              Senin İçin
+              {{'HEADER.FOR_YOU' | translate}}
               <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOpenForYou"></ion-icon>
               <ion-icon name="chevron-down-outline" *ngIf="isDropdownOpenForYou"></ion-icon>
             </ion-button>
             <ng-container *ngIf="isDropdownOpenForYou">
               <div style=" left: 0; width: 100%; z-index: 1;">
-                <ion-button fill="clear" expand="block" color="success">Podcast</ion-button>
-                <ion-button fill="clear" expand="block" color="success">Blog</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
               </div>
             </ng-container>
           </div>
           <ion-button fill="clear" shape="round">
-            Şirketler İçin
+            {{'HEADER.FOR_COMPANIES' | translate}}
           </ion-button>
           <div style="position: relative;">
             <ion-button fill="clear" shape="round" (click)="isDropdownOther = !isDropdownOther"
               [color]="isDropdownOther ? 'success' : ''">
-              Diğer
+              {{'HEADER.OTHER' | translate}}
               <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOther"></ion-icon>
               <ion-icon name="chevron-down-outline" *ngIf="isDropdownOther"></ion-icon>
             </ion-button>
             <ng-container *ngIf="isDropdownOther">
               <div style=" left: 0; width: 100%; z-index: 1;">
-                <ion-button fill="clear" expand="block" color="success">Hakkımızda</ion-button>
-                <ion-button fill="clear" expand="block" color="success">Eğitmen Ol</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
+                <ion-button fill="clear" expand="block" color="success" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
               </div>
             </ng-container>
           </div>
@@ -67,7 +67,7 @@
           letter-spacing: 0.025rem;
           color: #1d1d1d;
           font-size: 0.875rem;
-          line-height: 1.5rem;" [routerLink]="['/register']"><b style="color: #ffffff;">Kayıt Ol</b>
+          line-height: 1.5rem;" [routerLink]="['/register']"><b style="color: #ffffff;">{{ 'LOGIN.REGISTER' | translate }}</b>
           </ion-button>
           <ion-button *ngIf="account.username == ''" color="light" style="
           border-radius: 4px; 
@@ -79,7 +79,7 @@
           color: #1d1d1d;
           background-color: #ffffff;
           font-size: 0.875rem;
-          line-height: 1.5rem;" [routerLink]="['/login']"><b style="color: #1d1d1d;">Giriş Yap</b>
+          line-height: 1.5rem;" [routerLink]="['/login']"><b style="color: #1d1d1d;">{{ 'LOGIN.LOGIN' | translate }}</b>
           </ion-button>
           <ion-button *ngIf="account.username != ''" color="light" style="
           border-radius: 4px; 
@@ -93,7 +93,7 @@
           font-size: 0.875rem;
           line-height: 1.5rem;">
             <ion-icon slot="start" name="person-outline"></ion-icon>
-            <b style="color: #1d1d1d;">Hesabım</b>
+            <b style="color: #1d1d1d;" [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT' | translate}}</b>
           </ion-button>
 
           <ion-toolbar>
