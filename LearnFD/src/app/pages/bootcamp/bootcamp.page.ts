@@ -28,23 +28,42 @@ export class BootcampPage {
       loop: true,
     }
   };
-  constructor() { 
+  
+ 
+  constructor(
+    public translate: TranslateService,
+    private navCtrl: NavController
+    ) {
     this.checkScreenSize();
-
+  }
+  @HostListener('window:resize', ['$event'])
+  
+  onResize(event: any) {
+    this.checkScreenSize();
   }
   ionViewDidEnter() {
     this.isDropdownOtherEvents = false;
     this.isDropdownOpenForYou = false;
     this.isDropdownOther = false;
   }
-  onResize(event: any) {
-    this.checkScreenSize();
-  }
-  ngOnInit() {
+  changeLanguage(code: any) {
+    this.translate.setDefaultLang(code);
+    this.translate.use(code);
+    localStorage.setItem('selectLang', code);
+    this.settings.dil = code;
+    if (code === 'ar') {
+      document.documentElement.dir = 'rtl';
+    } else {
+      document.documentElement.dir = 'ltr';
+    }
   }
 
   checkScreenSize() {
     this.isMobile = (screen.width < 900) ? true : false;
   }
 
+  otherEventClicked() {
+
+  }
 }
+

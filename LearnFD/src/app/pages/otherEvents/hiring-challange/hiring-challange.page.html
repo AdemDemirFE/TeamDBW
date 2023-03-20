@@ -101,4 +101,93 @@
 
 <ion-content>
 
+
+  <ion-grid style="background-color: #F0F0F0; padding: 20px;">
+    <div style="max-width: 1200px; margin: auto;">
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <h2>{{'HEADER.CAREER' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+        </ion-col>
+        <ion-col style="text-align: center;">
+          <h2>{{'HEADER.APPLY' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' | translate}}</ion-button>
+        </ion-col>
+        <ion-col style="text-align: center;">
+          <h2>{{'HEADER.OTHER' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+        </ion-col>
+        <ion-col style="text-align: center;">
+          <h2>{{'HEADER.SOCIAL_MEDIA' | translate}}</h2>
+          <ion-button fill="clear"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+          <ion-button fill="clear"><ion-icon name="logo-instagram"></ion-icon></ion-button>
+          <ion-button fill="clear"><ion-icon name="logo-linkedin"></ion-icon></ion-button>
+          <ion-button fill="clear"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+
+  <ion-grid style="background-color: #F0F0F0; padding: 20px;">
+    <div style="max-width: 1100px; margin: auto;">
+      <ion-row>
+        <ion-col size="3">
+          <ion-buttons style="text-align: center;" >
+            <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('tr')">
+              TR
+            </ion-button>
+            <div class="vertical-line"></div>
+            <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('en')">
+              EN
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+        <ion-col size="9">
+          <p style="margin: 0;
+          font-size: 1rem;
+          letter-spacing: 0.15px;
+          font-family: Roboto,sans-serif;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: right;
+          color: #878787;
+          font-size: 0.55rem;
+          word-wrap: break-word;">
+            Tüm hakları saklıdır © Copyright 2023 adem.demir.fe@gmail.com
+          </p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          <img src="https://www.techcareer.net/_next/image?url=%2Fassets%2Fimages%2Ffooter%2Fiskur.png&w=128&q=75"
+            alt="">
+        </ion-col>
+        <ion-col size="9">
+          <p style="margin: 0;
+          font-size: 1rem;
+          letter-spacing: 0.15px;
+          font-family: Roboto,sans-serif;
+          font-weight: 400;
+          line-height: 1.5;
+          text-align: justify;
+          color: #878787;
+          font-size: 0.55rem;
+          word-wrap: break-word;"> Elektronik Yayıncılık ve İletişim Hizmetleri A.Ş. Özel İstihdam Bürosu Olarak
+            31/08/2021-30/08/2024 tarihleri arasında faaliyette bulunmak üzere, Türkiye İş Kurumu tarafından 17/08/2021
+            tarih ve 9317662 sayılı karar uyarınca 170 nolu belge ile faaliyet göstermektedir. 4904 sayılı kanun
+            uyarınca iş arayanlardan ücret alınmayacak ve menfaat temin edilmeyecektir. Şikayetleriniz için aşağıdaki
+            telefon numaralarına başvurabilirsiniz. Türkiye İş Kurumu İstanbul İl Müdürlüğü: 0212 249 29 87 Türkiye iş
+            Kurumu İstanbul Çalışma ve İş Kurumu Ümraniye Hizmet Merkezi : 0216 523 90 26
+          </p>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
 </ion-content>
