@@ -574,27 +574,26 @@
     <div style="max-width: 1200px; margin: auto;">
       <ion-row>
         <ion-col style="text-align: center;">
-          <h2>CAREER FOR DUMMIES</h2>
-          <ion-button expand="block" fill="clear" shape="round">Hakkımızda</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Etkinlikler</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">İşverenler</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Eğitmen ol</ion-button>
+          <h2>{{'HEADER.CAREER' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
-          <h2>BAŞVUR</h2>
-          <ion-button expand="block" fill="clear" shape="round">Bootcamp</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Hackathon</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Hiring challenge</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Tech masters bootcamp program</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">İş ilanları</ion-button>
+          <h2>{{'HEADER.APPLY' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
-          <h2>DİĞER</h2>
-          <ion-button expand="block" fill="clear" shape="round">Blog</ion-button>
-          <ion-button expand="block" fill="clear" shape="round">Podcast</ion-button>
+          <h2>{{'HEADER.OTHER' | translate}}</h2>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
-          <h2>SOSYAL MEDYA</h2>
+          <h2>{{'HEADER.SOCIAL_MEDIA' | translate}}</h2>
           <ion-button fill="clear"><ion-icon name="logo-twitter"></ion-icon></ion-button>
           <ion-button fill="clear"><ion-icon name="logo-instagram"></ion-icon></ion-button>
           <ion-button fill="clear"><ion-icon name="logo-linkedin"></ion-icon></ion-button>
@@ -603,7 +602,6 @@
       </ion-row>
     </div>
   </ion-grid>
-
 
   <ion-grid style="background-color: #F0F0F0; padding: 20px;">
     <div style="max-width: 1100px; margin: auto;">
@@ -660,6 +658,5 @@
       </ion-row>
     </div>
   </ion-grid>
-
 
 </ion-content>
