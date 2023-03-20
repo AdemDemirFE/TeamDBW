@@ -31,6 +31,42 @@ const routes: Routes = [
     path: 'bootcamp',
     loadChildren: () => import('./pages/bootcamp/bootcamp.module').then( m => m.BootcampPageModule)
   },
+  {
+    path: 'hackathon',
+    loadChildren: () => import('./pages/otherEvents/hackathon/hackathon.module').then( m => m.HackathonPageModule)
+  },
+  {
+    path: 'hiring-challange',
+    loadChildren: () => import('./pages/otherEvents/hiring-challange/hiring-challange.module').then( m => m.HiringChallangePageModule)
+  },
+  {
+    path: 'all-events',
+    loadChildren: () => import('./pages/otherEvents/all-events/all-events.module').then( m => m.AllEventsPageModule)
+  },
+  {
+    path: 'jobs',
+    loadChildren: () => import('./pages/jobs/jobs.module').then( m => m.JobsPageModule)
+  },
+  {
+    path: 'for-companies',
+    loadChildren: () => import('./pages/for-companies/for-companies.module').then( m => m.ForCompaniesPageModule)
+  },
+  {
+    path: 'podcast',
+    loadChildren: () => import('./pages/forYou/podcast/podcast.module').then( m => m.PodcastPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/other/about/about.module').then( m => m.AboutPageModule)
+  },
+  {
+    path: 'become-an-instructor',
+    loadChildren: () => import('./pages/other/become-an-instructor/become-an-instructor.module').then( m => m.BecomeAnInstructorPageModule)
+  },
+  {
+    path: 'blog',
+    loadChildren: () => import('./pages/forYou/blog/blog.module').then( m => m.BlogPageModule)
+  },
 ];
 
 @NgModule({
