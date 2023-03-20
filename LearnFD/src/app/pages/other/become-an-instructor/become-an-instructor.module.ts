@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { BecomeAnInstructorPageRoutingModule } from './become-an-instructor-routing.module';
 
 import { BecomeAnInstructorPage } from './become-an-instructor.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BecomeAnInstructorPageRoutingModule
+    BecomeAnInstructorPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [BecomeAnInstructorPage]
 })

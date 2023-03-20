@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PodcastPageRoutingModule } from './podcast-routing.module';
 
 import { PodcastPage } from './podcast.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PodcastPageRoutingModule
+    PodcastPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [PodcastPage]
 })

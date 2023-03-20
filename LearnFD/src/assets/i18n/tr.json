@@ -92,5 +92,20 @@
         "CURRENT_PASSWORD": "Mevcut Şifre",
         "NEW_PASSWORD": "Yeni Şifre",
         "NEW_PASSWORD_REPEAT": "Yeni Şifre Tekrar"
+    },
+    "HEADER": {
+        "BOOTCAMP": "Bootcamp",
+        "OTHER_EVENTS": "Diğer Etkinlikler",
+        "HACKATHON":"Hackathon",
+        "HIRING_CHALLANGE": "Hiring Challange",
+        "ALL_EVENTS": "Tüm Etkinlikler",
+        "JOBS": "İş ilanları",
+        "FOR_YOU":"Senin İçin",
+        "PODCAST": "Podcast",
+        "BLOG": "Blog",
+        "FOR_COMPANIES": "Şirketler İçin",
+        "OTHER": "Diğer",
+        "ABOUT_US": "Hakkımızda",
+        "BECOME_AN_INSTRUCTOR": "Eğitmen Ol"
     }
 }

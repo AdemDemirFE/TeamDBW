@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { HackathonPageRoutingModule } from './hackathon-routing.module';
 
 import { HackathonPage } from './hackathon.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HackathonPageRoutingModule
+    HackathonPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [HackathonPage]
 })

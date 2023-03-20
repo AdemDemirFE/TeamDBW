@@ -81,7 +81,11 @@ export class HomePage {
   onResize(event: any) {
     this.checkScreenSize();
   }
-
+  ionViewDidEnter() {
+    this.isDropdownOtherEvents = false;
+    this.isDropdownOpenForYou = false;
+    this.isDropdownOther = false;
+  }
   changeLanguage(code: any) {
     this.translate.setDefaultLang(code);
     this.translate.use(code);

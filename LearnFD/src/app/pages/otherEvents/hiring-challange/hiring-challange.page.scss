@@ -1,0 +1,68 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  //color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.menuBtn {
+  color: #1d1d1d;
+}
+
+@media screen and (min-width: 900px) {
+  #menu {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 899px) {
+  #menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #menu {
+    position: fixed;
+    top: 56px;
+    left: -240px;
+    width: 240px;
+    height: 100%;
+    z-index: 100;
+    transition: all 0.3s ease-out;
+    background-color: #fff;
+  }
+
+  #menu.open {
+    left: 0;
+  }
+}
+
+ion-button{
+  box-shadow: none;
+  font-weight: 500;
+  text-transform: initial;
+  letter-spacing: 0.025rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #1D1D1D;
+}

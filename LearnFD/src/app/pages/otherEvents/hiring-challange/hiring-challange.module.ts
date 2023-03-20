@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { HiringChallangePageRoutingModule } from './hiring-challange-routing.module';
 
 import { HiringChallangePage } from './hiring-challange.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HiringChallangePageRoutingModule
+    HiringChallangePageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [HiringChallangePage]
 })
