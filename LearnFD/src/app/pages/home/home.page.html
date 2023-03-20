@@ -17,13 +17,13 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOtherEvents">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round">Hackathon</ion-button>
-              <ion-button fill="clear" shape="round">Hiring Challange</ion-button>
-              <ion-button fill="clear" shape="round">Tüm Etkinlikler</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">Hackathon</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">Hiring Challange</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">Tüm Etkinlikler</ion-button>
             </div>
           </ng-container>
         </div>
-        <ion-button fill="clear" shape="round">
+        <ion-button fill="clear" shape="round" [routerLink]="['/jobs']">
           İş İlanları
         </ion-button>
         <div style="position: relative;">
@@ -34,12 +34,12 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOpenForYou">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round">Podcast</ion-button>
-              <ion-button fill="clear" shape="round">Blog</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">Podcast</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/blog']">Blog</ion-button>
             </div>
           </ng-container>
         </div>
-        <ion-button fill="clear" shape="round">
+        <ion-button fill="clear" shape="round" [routerLink]="['/for-companies']">
           Şirketler İçin
         </ion-button>
         <div style="position: relative;">
@@ -50,8 +50,8 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOther">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round">Hakkımızda</ion-button>
-              <ion-button fill="clear" shape="round">Eğitmen Ol</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/about']">Hakkımızda</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/become-an-instructor']">Eğitmen Ol</ion-button>
             </div>
           </ng-container>
         </div>
