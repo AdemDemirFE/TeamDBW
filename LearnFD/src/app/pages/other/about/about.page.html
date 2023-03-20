@@ -1,6 +1,104 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>about</ion-title>
+  <ion-toolbar style="max-width: 1000px; margin: auto; text-align: center; justify-content: center;">
+    <ion-buttons slot="start">
+      <ion-menu-button *ngIf="isMobile" style="margin-top: 10px; color: #1d1d1d;"></ion-menu-button>
+      <div style="text-align: center;">
+        <img [routerLink]="['/home']" style="width: 70px; margin: 10px;" src="assets/logo/logo-no-background.png">
+      </div>
+      <ng-container *ngIf="!isMobile" style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
+        <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
+          {{'HEADER.BOOTCAMP' | translate}}
+        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOtherEvents = !isDropdownOtherEvents"
+            [color]="isDropdownOtherEvents ? 'success' : ''">
+            {{'HEADER.OTHER_EVENTS' | translate}}
+            <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOtherEvents"></ion-icon>
+            <ion-icon name="chevron-down-outline" *ngIf="isDropdownOtherEvents"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOtherEvents">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' | translate}}</ion-button>
+            </div>
+          </ng-container>
+        </div>
+        <ion-button fill="clear" shape="round" [routerLink]="['/jobs']">
+          {{'HEADER.JOBS' | translate}}
+        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOpenForYou = !isDropdownOpenForYou"
+            [color]="isDropdownOpenForYou ? 'success' : ''">
+            {{'HEADER.FOR_YOU' | translate}}
+            <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOpenForYou"></ion-icon>
+            <ion-icon name="chevron-down-outline" *ngIf="isDropdownOpenForYou"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOpenForYou">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
+            </div>
+          </ng-container>
+        </div>
+        <ion-button fill="clear" shape="round" [routerLink]="['/for-companies']">
+          {{'HEADER.FOR_COMPANIES' | translate}}
+        </ion-button>
+        <div style="position: relative;">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOther = !isDropdownOther"
+          color="success">
+            {{'HEADER.OTHER' | translate}}
+            <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOther"></ion-icon>
+            <ion-icon name="chevron-down-outline" *ngIf="isDropdownOther"></ion-icon>
+          </ion-button>
+          <ng-container *ngIf="isDropdownOther">
+            <div style=" left: 0; width: 100%; z-index: 1;">
+              <ion-button fill="clear" shape="round" [routerLink]="['/about']" color="success">{{'HEADER.ABOUT_US' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+
+    </ion-buttons>
+    <ion-button fill="outline" color="light" style="
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px; 
+    width: 100px;
+    box-shadow: none;
+    font-weight: 500;
+    text-transform: initial;
+    letter-spacing: 0.025rem;
+    color: #1d1d1d;
+    font-size: 0.875rem;
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;"
+    [routerLink]="['/register']">{{ 'LOGIN.REGISTER' | translate }}</b>
+    </ion-button>
+    <ion-button color="success" style="
+    border-radius: 4px; 
+    width: 100px;
+    box-shadow: none;
+    font-weight: 500;
+    text-transform: initial;
+    letter-spacing: 0.025rem;
+    color: #1d1d1d;
+    font-size: 0.875rem;
+    line-height: 1.5rem;"
+    [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' | translate }}</b>
+    </ion-button>
+    <ion-button *ngIf="account.username != ''" fill="outline" color="light" style="
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px; 
+    width: 100px;
+    box-shadow: none;
+    font-weight: 500;
+    text-transform: initial;
+    letter-spacing: 0.025rem;
+    color: #1d1d1d;
+    font-size: 0.875rem;
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" 
+    [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT' | translate}}</b>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 

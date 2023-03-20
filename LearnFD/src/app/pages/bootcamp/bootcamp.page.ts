@@ -32,6 +32,11 @@ export class BootcampPage {
     this.checkScreenSize();
 
   }
+  ionViewDidEnter() {
+    this.isDropdownOtherEvents = false;
+    this.isDropdownOpenForYou = false;
+    this.isDropdownOther = false;
+  }
   onResize(event: any) {
     this.checkScreenSize();
   }

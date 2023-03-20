@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { ForCompaniesPageRoutingModule } from './for-companies-routing.module';
 
 import { ForCompaniesPage } from './for-companies.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ForCompaniesPageRoutingModule
+    ForCompaniesPageRoutingModule,
+    TranslateModule.forChild(),
   ],
   declarations: [ForCompaniesPage]
 })
