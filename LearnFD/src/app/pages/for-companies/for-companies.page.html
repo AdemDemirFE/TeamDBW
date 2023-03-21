@@ -5,7 +5,8 @@
       <div style="text-align: center;">
         <img [routerLink]="['/home']" style="width: 70px; margin: 10px;" src="assets/logo/logo-no-background.png">
       </div>
-      <ng-container *ngIf="!isMobile" style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
+      <ng-container *ngIf="!isMobile"
+        style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
         <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
           {{'HEADER.BOOTCAMP' | translate}}
         </ion-button>
@@ -18,9 +19,12 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOtherEvents">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' |
+                translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -36,7 +40,8 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOpenForYou">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+                translate}}</ion-button>
               <ion-button fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
             </div>
           </ng-container>
@@ -53,8 +58,10 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOther">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round"
+                [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -71,8 +78,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;"
-    [routerLink]="['/register']">{{ 'LOGIN.REGISTER' | translate }}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/register']">{{ 'LOGIN.REGISTER' |
+        translate }}</b>
     </ion-button>
     <ion-button color="success" style="
     border-radius: 4px; 
@@ -83,8 +90,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"
-    [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' | translate }}</b>
+    line-height: 1.5rem;" [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' |
+        translate }}</b>
     </ion-button>
     <ion-button *ngIf="account.username != ''" fill="outline" color="light" style="
     background-color: rgb(255, 255, 255);
@@ -96,37 +103,252 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" 
-    [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT' | translate}}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT'
+        | translate}}</b>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-grid fixed style="
+  color: white;
+  background: #293349;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 350px;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;">
 
-  
+    <img src="assets/img/b3.png" alt="" style="margin-top: 50px; width: 74px;
+  aspect-ratio: auto 74 / 74;
+  height: 74px;">
+    <h1 style="
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  text-align: center;">
+      Şirketiniz için en doğru "Dijital Yetenek" Learn FD'de!
+    </h1>
+    <h2 style="
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 500;
+      letter-spacing: 0.15px;
+      line-height: 1.4;
+      font-family: Roboto,sans-serif;
+      padding-left: 16px;
+      padding-right: 16px;
+      text-align: center;
+      color: #00C26D;">
+      Tüm yaratıcılığını kullan, kendini kanıtla!
+    </h2>
+  </ion-grid>
+
+
+  <ion-grid style="background-color: #ffffff; text-align: center;">
+
+    <div style="max-width: 1200px; margin: auto;">
+      <h1>
+        <strong> Learn FD </strong> ile şirketinize dijital yetenekleri kazandırın!
+        Aradığınız dijital yetenekler için yarışmalar ve eğitimler düzenleyin, işe alacağınız kişilerin teknik
+        yetkinliklerinden emin olun!
+      </h1>
+      <ion-row>
+        <ion-col size-xs="12" size-md="4">
+          <ion-card style="text-align: center; max-width: 400px; height: 300px; margin: auto; padding: 10px;">
+            <img style=" max-width: 250px;" src="assets/img/c1.png">
+            <h3 style="
+              font-size: 1.125rem;
+              font-weight: 500;
+              letter-spacing: 0.15px;
+              line-height: 1.4;
+              font-family: Roboto,sans-serif;
+              color: #1D1D1D;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;">
+              Bootcamp
+            </h3>
+            <p style="text-align: justify;">Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün yönetimi
+              gibi teknolojik konularda
+              düzenlenir. Hem eğitim alabilir, hem de o alanda işe başlayabilecek kadar fazla bilgi ve donanım
+              kazanabilirsin.</p>
+            <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
+              <strong>Hemen Katılın</strong>
+              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4">
+          <ion-card style="text-align: center; max-width: 400px; height: 300px; margin: auto; padding: 10px;">
+            <img style=" max-width: 250px;" src="assets/img/c2.png">
+            <h3 style="
+              font-size: 1.125rem;
+              font-weight: 500;
+              letter-spacing: 0.15px;
+              line-height: 1.4;
+              font-family: Roboto,sans-serif;
+              color: #1D1D1D;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;">
+              Hackathon
+            </h3>
+            <p style="text-align: justify;">Hackathon etkinliklerinde takımlar halinde veya bireysel olarak
+              yarışacaksın. Etkinlik için belli bir
+              zaman verilir ve yeni fikirler, yeni dijital ürünler üretmesi, sonra da bunları kodlaması istenir.</p>
+            <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
+              <strong>Hemen Katılın</strong>
+              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-card>
+        </ion-col>
+        <ion-col size-xs="12" size-md="4">
+          <ion-card style="text-align: center; max-width: 400px; height: 300px; margin: auto; padding: 10px;">
+            <img style="max-width: 250px;" src="assets/img/c3.png">
+            <h3 style="
+              font-size: 1.125rem;
+              font-weight: 500;
+              letter-spacing: 0.15px;
+              line-height: 1.4;
+              font-family: Roboto,sans-serif;
+              color: #1D1D1D;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;">
+              Hiring Challenge
+            </h3>
+            <p style="text-align: justify;">Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod hatası gibi
+              problemleri belirli bir
+              zaman aralığı içerisinde çözmeye çalışacaksın. Bu yarışmalarda algoritma tasarımına, özgünlüğe ve kod
+              kalitesine göre puan alırsın.</p>
+            <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
+              <strong>Hemen Katılın</strong>
+              <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+            </ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+
+  <ion-grid fixed style="
+  color: white;
+  background: #00c26d;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 350px;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;">
+
+    <div style="max-width: 1200px; margin: auto; text-align: center;">
+
+      <img src="assets/img/b3.png" alt="" style="margin-top: 50px; width: 74px;
+  aspect-ratio: auto 74 / 74;
+  height: 74px;">
+      <h1 style="
+  display: block;
+  font-size: 1.6em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  text-align: center;">
+        İşe alım uzmanlarının %83’ü dijital yetenek ihtiyacı olan pozisyonları doldurmakta zorluk çekiyor.
+        techcareer.net ile dijital yetenek arayışındaki zorlukları aşın.
+        <br>Hemen formu doldurun, şirketinizle iletişime geçelim!
+      </h1>
+      <ion-button color="light" style="
+          border-radius: 4px; 
+          width: 200px;
+          box-shadow: none;
+          font-weight: 500;
+          text-transform: initial;
+          letter-spacing: 0.025rem;
+          color: #1d1d1d;
+          font-size: 0.875rem;
+          line-height: 1.5rem;"><b style="margin:10px;">Sizi Arayalım</b>
+      </ion-button>
+    </div>
+  </ion-grid>
+
   <ion-grid style="background-color: #F0F0F0; padding: 20px;">
     <div style="max-width: 1200px; margin: auto;">
       <ion-row>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.CAREER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.APPLY' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.OTHER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.SOCIAL_MEDIA' | translate}}</h2>
@@ -143,7 +365,7 @@
     <div style="max-width: 1100px; margin: auto;">
       <ion-row>
         <ion-col size="3">
-          <ion-buttons style="text-align: center;" >
+          <ion-buttons style="text-align: center;">
             <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('tr')">
               TR
             </ion-button>

@@ -161,8 +161,7 @@ text-align: center;">
   </ion-grid>
 
   <ion-grid style="background-color: #F6F6F6;">
-    <div style="max-width: 1200px; margin: auto;">
-
+    <div style="max-width: 1000px; margin: auto;">
       <ion-card-header>
         <ion-card-title style="margin: 0;
         font-size: 1.6rem;
@@ -171,115 +170,130 @@ text-align: center;">
         line-height: 1.2;
         font-family: Roboto,sans-serif;
         text-align: center;
-        color: #1D1D1D;">Başvurunu Bekleyen Etkinlikler</ion-card-title>
+        color: #1D1D1D;">Başvurunu Bekleyen İş İlanları</ion-card-title>
       </ion-card-header>
-      <ion-row>
-        <ion-col size-xs="12" size-md="6" class="ion-text-center">
-          <ion-card style="text-align: center; max-width: 400px; margin: auto;">
-            <img style="margin: 20px;  max-width: 250px;" src="assets/img/1.png">
-            <h3 style="margin: 0;
+      <ion-card style="text-align: left; padding: 150x;">
+        <ion-row>
+          <ion-col size="4" style="margin: auto; text-align: center;">
+            <ion-button expand="block" fill="clear" color="danger" style="width: 100%; ">
+              Acil İlan
+            </ion-button>
+            <img style="width: auto;" src="assets/img/akgun_logo.png">
+            <ion-button expand="block" color="success" style="width: 100%;">
+              Hemen Başvur
+            </ion-button>
+            <ion-button expand="block" color="light" style="border-radius: 10px; width: 100%; border: solid 1px #00c26d">
+              Detayları Gör
+            </ion-button>
+          </ion-col>
+          <ion-col size="8">
+            <h3 style="
             font-size: 1.125rem;
             font-weight: 500;
             letter-spacing: 0.15px;
             line-height: 1.4;
             font-family: Roboto,sans-serif;
-            color: #1D1D1D;
+            color: #00c26d;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;">
-              Learn Masters Bootcamp Program
+              <strong>Frontend Developer</strong>
             </h3>
-            <p>Ücretsiz öğren, mezun ol, çalışmaya başla.</p>
-            <ion-card-content>
-              <ion-row>
-                <ion-col size="6" style="text-align: left;">
-                  <h3>Son Başvuru: </h3>
-                  <b>Sürekli Başvuruya Açık</b>
-                </ion-col>
-                <ion-col size="6">
-                  <ion-button color="success" shape="round" style="
-                  border-radius: 4px; 
-                  box-shadow: none;
-                  font-weight: 500;
-                  text-transform: initial;
-                  letter-spacing: 0.025rem;
-                  color: #1d1d1d;
-                  font-size: 0.875rem;
-                  line-height: 1.5rem;"><b style="margin:10px; color: #ffffff;">Başvur</b>
-                  </ion-button>
-                </ion-col>
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size-xs="12" size-md="6">
-          <ion-card style="text-align: center; max-width: 400px; margin: auto;">
-            <img style="margin: 20px;  max-width: 250px;" src="assets/img/2.png">
-            <h3 style="margin: 0;
-            font-size: 1.125rem;
-            font-weight: 500;
-            letter-spacing: 0.15px;
-            line-height: 1.4;
-            font-family: Roboto,sans-serif;
-            color: #1D1D1D;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;">
-              Learn Masters Bootcamp Program
-            </h3>
-            <p>Ücretsiz öğren, mezun ol, çalışmaya başla.</p>
-            <ion-card-content>
-              <ion-row>
-                <ion-col size="6" style="text-align: left;">
-                  <h3>Son Başvuru: </h3>
-                  <b>Sürekli Başvuruya Açık</b>
-                </ion-col>
-                <ion-col size="6">
-                  <ion-button color="success" shape="round" style="
-                  border-radius: 4px; 
-                  box-shadow: none;
-                  font-weight: 500;
-                  text-transform: initial;
-                  letter-spacing: 0.025rem;
-                  color: #1d1d1d;
-                  font-size: 0.875rem;
-                  line-height: 1.5rem;"><b style="margin:10px; color: #ffffff;">Başvur</b>
-                  </ion-button>
-                </ion-col>
-              </ion-row>
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </div>
-  </ion-grid>
+            <h6> Akgün </h6>
+            <ion-row>
+              <ion-col size="6">
+                <div>
+                  <ion-icon slot="start" name="location"></ion-icon>
+                  <ion-label>Ankara</ion-label>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div>
+                  <ion-icon slot="start" name="time"></ion-icon>
+                  <ion-label>Tam Zamanlı</ion-label>
+                </div></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6"><div>
+                <ion-icon slot="start" name="home"></ion-icon>
+                <ion-label>Uzaktan</ion-label>
+              </div>
+            </ion-col>
+              <ion-col size="6"><div>
+                <ion-icon slot="start" name="flask"></ion-icon>
+                <ion-label>Uzman</ion-label>
+              </div>
+            </ion-col>
+            </ion-row>
+            <p style="text-align: justify;">Türkiye’nin en iyisi olma hedefiyle yola çıkan Akgün Yazılım; güçlü teknolojik alt yapısıyla; pazarlama, satış ve müşteri hizmetleri deneyimiyle haftanın her günü ve her saati işlem kolaylığı sağlamak için yola çıktı.</p>
+            <p style="text-align: justify;">Teknolojinin ve Kripto dünyasının geleceğine şahitlik etmek istiyorsanız, Akgün’de yerinizi alın!</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
 
-  <ion-grid style="background-color: #293349; align-items: center; color: white; text-align: center;">
-    <div style="max-width: 1200px; margin: auto;">
-      <h3>İletişim adresini bırak, seni yeni işlerden haberdar edelim.</h3>
-      <ion-item style="max-width: 600px; margin: auto; border-radius: 5px;">
-        <ion-input type="mail" placeholder="E-Mail"></ion-input>
-      </ion-item>
-    </div>
-    <div style="margin: 10px 10px;">
-      <ion-checkbox></ion-checkbox>İletişim adresime e-ileti gönderilmesine izin veriyorum.*<br>
-    </div>
-    <ion-button color="success" style="
-            border-radius: 4px; 
-            width: 120px;
-            height: 40px;
-            box-shadow: none;
+      <ion-card style="text-align: left; padding: 150x;">
+        <ion-row>
+          <ion-col size="4" style="margin: auto; text-align: center;">
+            <ion-button expand="block" fill="clear" color="danger" style="width: 100%; ">
+              Acil İlan
+            </ion-button>
+            <img style="width: auto;" src="assets/img/akgun_logo.png">
+            <ion-button expand="block" color="success" style="width: 100%;">
+              Hemen Başvur
+            </ion-button>
+            <ion-button expand="block" color="light" style="border-radius: 10px; width: 100%; border: solid 1px #00c26d">
+              Detayları Gör
+            </ion-button>
+          </ion-col>
+          <ion-col size="8">
+            <h3 style="
+            font-size: 1.125rem;
             font-weight: 500;
-            text-transform: initial;
-            letter-spacing: 0.025rem;
-            color: #1d1d1d;
-            font-size: 0.875rem;
-            line-height: 1.5rem;"><b style="margin:10px; color: #ffffff;">Gönder</b>
-        </ion-button>
+            letter-spacing: 0.15px;
+            line-height: 1.4;
+            font-family: Roboto,sans-serif;
+            color: #00c26d;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;">
+              <strong>Frontend Developer</strong>
+            </h3>
+            <h6> Akgün </h6>
+            <ion-row>
+              <ion-col size="6">
+                <div>
+                  <ion-icon slot="start" name="location"></ion-icon>
+                  <ion-label>Ankara</ion-label>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div>
+                  <ion-icon slot="start" name="time"></ion-icon>
+                  <ion-label>Tam Zamanlı</ion-label>
+                </div></ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6"><div>
+                <ion-icon slot="start" name="home"></ion-icon>
+                <ion-label>Uzaktan</ion-label>
+              </div>
+            </ion-col>
+              <ion-col size="6"><div>
+                <ion-icon slot="start" name="flask"></ion-icon>
+                <ion-label>Uzman</ion-label>
+              </div>
+            </ion-col>
+            </ion-row>
+            <p style="text-align: justify;">Türkiye’nin en iyisi olma hedefiyle yola çıkan Akgün Yazılım; güçlü teknolojik alt yapısıyla; pazarlama, satış ve müşteri hizmetleri deneyimiyle haftanın her günü ve her saati işlem kolaylığı sağlamak için yola çıktı.</p>
+            <p style="text-align: justify;">Teknolojinin ve Kripto dünyasının geleceğine şahitlik etmek istiyorsanız, Akgün’de yerinizi alın!</p>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
   </ion-grid>
 
   <ion-grid style="background-color: #F0F0F0; padding: 20px;">
