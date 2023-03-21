@@ -18,6 +18,16 @@ export class HackathonPage {
   settings = GeneralSettings;
   languages = Langs;
   
+  slideOpts4 = {
+    initialSlide: 0,
+    slidesPerView: 2,
+    speed: 2000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      loop: true,
+    }
+  };
 
   constructor(
     public translate: TranslateService,
