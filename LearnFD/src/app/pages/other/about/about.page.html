@@ -5,7 +5,8 @@
       <div style="text-align: center;">
         <img [routerLink]="['/home']" style="width: 70px; margin: 10px;" src="assets/logo/logo-no-background.png">
       </div>
-      <ng-container *ngIf="!isMobile" style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
+      <ng-container *ngIf="!isMobile"
+        style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
         <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
           {{'HEADER.BOOTCAMP' | translate}}
         </ion-button>
@@ -18,9 +19,12 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOtherEvents">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' |
+                translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -36,7 +40,8 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOpenForYou">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+                translate}}</ion-button>
               <ion-button fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
             </div>
           </ng-container>
@@ -45,16 +50,17 @@
           {{'HEADER.FOR_COMPANIES' | translate}}
         </ion-button>
         <div style="position: relative;">
-          <ion-button fill="clear" shape="round" (click)="isDropdownOther = !isDropdownOther"
-          color="success">
+          <ion-button fill="clear" shape="round" (click)="isDropdownOther = !isDropdownOther" color="success">
             {{'HEADER.OTHER' | translate}}
             <ion-icon name="chevron-forward-outline" *ngIf="!isDropdownOther"></ion-icon>
             <ion-icon name="chevron-down-outline" *ngIf="isDropdownOther"></ion-icon>
           </ion-button>
           <ng-container *ngIf="isDropdownOther">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/about']" color="success">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/about']" color="success">{{'HEADER.ABOUT_US' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round"
+                [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -71,8 +77,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;"
-    [routerLink]="['/register']">{{ 'LOGIN.REGISTER' | translate }}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/register']">{{ 'LOGIN.REGISTER' |
+        translate }}</b>
     </ion-button>
     <ion-button color="success" style="
     border-radius: 4px; 
@@ -83,8 +89,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"
-    [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' | translate }}</b>
+    line-height: 1.5rem;" [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' |
+        translate }}</b>
     </ion-button>
     <ion-button *ngIf="account.username != ''" fill="outline" color="light" style="
     background-color: rgb(255, 255, 255);
@@ -96,13 +102,59 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" 
-    [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT' | translate}}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT'
+        | translate}}</b>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid style="background-color: #F0F0F0; padding: 20px;">
+    <div style="max-width: 1200px; margin: auto;">
+      <h1>
+        Hakkımızda
+      </h1>
+      <ion-row>
+        <ion-col>
+          <img style="width: auto; min-width: 300px;"
+            src="https://www.techcareer.net/_next/image?url=%2Fassets%2Fimages%2Fpages%2FaboutUs%2Fmain-section%2Ftcn-team.png&w=640&q=100"
+            alt="">
+        </ion-col>
+        <ion-col style="min-width: 200px; font-size: 26px;">
+          <ion-label><strong style="color: #00c26d;">Learn FD</strong>, 2023 yılında hayata geçirilen “Türkiye’nin
+            Teknoloji Yeteneği Platformu” olmayı hedefleyen bir kurumsal girişimdir.
+            Hem Türkiye’de hem dünyada yaşanan dijital yetenek açığı sorununa bir çözüm olabilmek amacıyla yeni dijital
+            yetenekler yetiştiren ve bilişim sektöründe halihazırda çalışan adayları bir araya getiren bir
+            platformdur.</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-label>
+        Teknoloji ve bilişim alanında uzmanlaşan ya da bu alanda kendini geliştirmek isteyen yazılımcılar, ürün ve proje
+        yöneticileri, ağ ve güvenlik, veri tabanı, veri işleme, veri bilimi, tasarım, kullanıcı arayüzü ve deneyimi,
+        dijital pazarlama ve diğer tüm bilişim pozisyonlarındaki herkese ulaşmayı hedeflemektedir.
+        <br><br>Bunun yanı sıra bilişim sektörüne girmek isteyen, ilgili veya ilgisiz bölümlerden mezun olmuş öğrenci,
+        deneyimli veya deneyimsiz tüm adaylar hedef kitlesi içinde yer almaktadır.
+        <br><br><b>techcareer.net 2022 yılında;</b>
+        <br><br> - 160'dan fazla bootcamp, hackathon veya hiring challenge,
+        <br><br> - 200 binden fazla başvuru havuzu,
+        <br><br> - 3000'den fazla yetiştirilmiş aday ve %70 yerleşme oranı ile
+        <br><br> Türkiye bilişim sektörüne büyük katkılar sağladı.
+        <br><br><b>Vizyonumuz:</b>
+        <br>Global bir problem olan dijital yetenek açığına Türkiye'den başlayarak tüm dünya için çözüm sağlayabilen
+        platform olmak.
+        <br><br><b>Misyonumuz:</b>
+        <br>Teknoloji kariyeri denilince hem adaylar hem de işverenler için 1 numaralı platform olmak.
+      </ion-label>
+
+    </div>
+  </ion-grid>
+
+  <ion-grid style="background-color: #fff; padding: 20px;">
+    <div style="max-width: 1200px; margin: auto;">
+
+    </div>
+  </ion-grid>
 
 
   <ion-grid style="background-color: #F0F0F0; padding: 20px;">
@@ -110,22 +162,32 @@
       <ion-row>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.CAREER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.APPLY' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.OTHER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.SOCIAL_MEDIA' | translate}}</h2>
@@ -142,7 +204,7 @@
     <div style="max-width: 1100px; margin: auto;">
       <ion-row>
         <ion-col size="3">
-          <ion-buttons style="text-align: center;" >
+          <ion-buttons style="text-align: center;">
             <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('tr')">
               TR
             </ion-button>
@@ -193,5 +255,5 @@
       </ion-row>
     </div>
   </ion-grid>
-  
+
 </ion-content>
