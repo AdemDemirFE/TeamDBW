@@ -66,3 +66,20 @@ ion-button{
   line-height: 1.5rem;
   color: #1D1D1D;
 }
+
+.slidesLastNews {
+  background: linear-gradient(to top, #293349 50%, #fff 50%); 
+  width: 100%; 
+  padding: 20px;
+  ion-slide {
+    padding: 10px;
+    img{
+      border-style: solid;
+      max-height: 400px;
+      border-width: 0px 16px 16px 0px;
+      border-image-slice: 0 16 16 0;
+      border-image-source: linear-gradient(-125deg, transparent 13px, #00c26d  0px, #00c26d  calc(100% - 9px), transparent 0px);
+    }
+  }
+  
+}
