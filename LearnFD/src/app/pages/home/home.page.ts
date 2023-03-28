@@ -1,8 +1,16 @@
 import { Component, HostListener } from '@angular/core';
-import { NavController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { GeneralSettings, account } from 'src/app/pages';
 import { Langs } from 'src/app/pages/select-lang/lang';
+import { OnInit, ViewChild, ElementRef } from '@angular/core';
+import { NavigationExtras, ActivatedRoute, Router } from '@angular/router';
+import { NavController, ActionSheetController, LoadingController, ModalController } from '@ionic/angular';
+import * as moment from 'moment';
+import { Service } from 'src/providers/service/service';
+import { C_Utils } from 'src/providers/utils';
+import { HttpClient } from '@angular/common/http';
+import { interval, Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -55,7 +63,7 @@ export class HomePage {
       delay: 500,
       disableOnInteraction: false,
       loop: true,
-      
+
     }
   };
   slideOpts4 = {
@@ -69,15 +77,24 @@ export class HomePage {
     }
   };
   sliderThree: any;
-
+  activeTrainings: any = [];
+  activeTrainingsTmp: any = [];
   constructor(
-    public translate: TranslateService,
-    private navCtrl: NavController
-    ) {
+    public router: Router,
+    private loadingController: LoadingController,
+    public navCtrl: NavController,
+    public activatedRoute: ActivatedRoute,
+    public translateService: TranslateService,
+    public service: Service,
+    public c_Utils: C_Utils,
+    public http: HttpClient,
+    private actionSheetCtrl: ActionSheetController,
+    public modalCtrl: ModalController,
+  ) {
     this.checkScreenSize();
   }
   @HostListener('window:resize', ['$event'])
-  
+
   onResize(event: any) {
     this.checkScreenSize();
   }
@@ -87,8 +104,8 @@ export class HomePage {
     this.isDropdownOther = false;
   }
   changeLanguage(code: any) {
-    this.translate.setDefaultLang(code);
-    this.translate.use(code);
+    this.translateService.setDefaultLang(code);
+    this.translateService.use(code);
     localStorage.setItem('selectLang', code);
     this.settings.dil = code;
     if (code === 'ar') {
@@ -103,6 +120,37 @@ export class HomePage {
   }
 
   otherEventClicked() {
+  }
 
+  getTrainings() {
+    this.translateService.get(['ERROR', 'PLEASE_WAIT', "USAGE"]).subscribe(async values => {
+      //this.c_Utils.presentLoading(values.PLEASE_WAIT);
+      var loading = await this.loadingController.create({
+        message: (values.PLEASE_WAIT),
+        duration: 2000
+      });
+      await loading.present();
+      this.activeTrainings.splice(0, this.activeTrainings.length);
+      //&bildirimTipi.equals=1
+      this.service.query("trainings?page=0&size=10&sort=tarih,asc").subscribe((response: any) => {
+        loading.dismiss();
+        if (response.length > 0) {
+          this.activeTrainings = response;
+        } else if (response.length == 0) {
+          this.c_Utils.getToast(values.ERROR.INTERNAL_SERVER_ERROR, 'middle', 4000, false, "toast-error");
+        } else {
+          if (response.mesaj != null && response.mesaj != undefined) {
+            this.c_Utils.getToast(values.ERROR[response.mesaj], 'middle', 4000, false, "toast-error");
+          } else {
+            this.c_Utils.getToast(values.ERROR.INTERNAL_SERVER_ERROR, 'middle', 4000, false, "toast-error");
+          }
+        }
+      }, (err) => {
+        setTimeout(() => {
+          loading.dismiss();
+        }, 1000);
+        this.c_Utils.getToast(values.ERROR.NOT_CONNECT_SERVER, 'middle', 4000, false, "toast-error");
+      });
+    });
   }
 }

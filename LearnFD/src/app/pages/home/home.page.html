@@ -5,7 +5,8 @@
       <div style="text-align: center;">
         <img [routerLink]="['/home']" style="width: 70px; margin: 10px;" src="assets/logo/logo-no-background.png">
       </div>
-      <ng-container *ngIf="!isMobile" style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
+      <ng-container *ngIf="!isMobile"
+        style="text-align: center; justify-content: center; align-items: center; color: #1d1d1d;">
         <ion-button fill="clear" shape="round" [routerLink]="['/bootcamp']">
           {{'HEADER.BOOTCAMP' | translate}}
         </ion-button>
@@ -18,9 +19,12 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOtherEvents">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.ALL_EVENTS' |
+                translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -36,7 +40,8 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOpenForYou">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+                translate}}</ion-button>
               <ion-button fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
             </div>
           </ng-container>
@@ -53,8 +58,10 @@
           </ion-button>
           <ng-container *ngIf="isDropdownOther">
             <div style=" left: 0; width: 100%; z-index: 1;">
-              <ion-button fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-              <ion-button fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+              <ion-button fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' |
+                translate}}</ion-button>
+              <ion-button fill="clear" shape="round"
+                [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
             </div>
           </ng-container>
         </div>
@@ -71,8 +78,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;"
-    [routerLink]="['/register']">{{ 'LOGIN.REGISTER' | translate }}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/register']">{{ 'LOGIN.REGISTER' |
+        translate }}</b>
     </ion-button>
     <ion-button color="success" style="
     border-radius: 4px; 
@@ -83,8 +90,8 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"
-    [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' | translate }}</b>
+    line-height: 1.5rem;" [routerLink]="['/login']"><b style="margin:10px; color: #ffffff;">{{ 'LOGIN.LOGIN' |
+        translate }}</b>
     </ion-button>
     <ion-button *ngIf="account.username != ''" fill="outline" color="light" style="
     background-color: rgb(255, 255, 255);
@@ -96,51 +103,26 @@
     letter-spacing: 0.025rem;
     color: #1d1d1d;
     font-size: 0.875rem;
-    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" 
-    [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT' | translate}}</b>
+    line-height: 1.5rem;"><b style="margin:10px; color: #1d1d1d;" [routerLink]="['/my-account']">{{'HEADER.MY_ACCOUNT'
+        | translate}}</b>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-slides pager="true" [options]="slideOpts1"
-    style="background: linear-gradient(to top, #293349 50%, #fff 50%); width: 100%; padding: 20px;">
+  <ion-slides class="slidesLastNews" pager="true" [options]="slideOpts1">
     <ion-slide style=" padding: 10px;">
-      <img
-        style="border-style: solid;
-      max-height: 400px;
-      border-width: 0px 16px 16px 0px;
-      border-image-slice: 0 16 16 0;
-      border-image-source: linear-gradient(-125deg, transparent 13px, #00c26d 0px, #00c26d  calc(100% - 9px), transparent 0px);"
-        src="assets/img/a1.png">
+      <img src="assets/img/a1.png">
     </ion-slide>
     <ion-slide style=" padding: 10px;">
-      <img
-        style="border-style: solid;
-      max-height: 400px;
-      border-width: 0px 16px 16px 0px;
-      border-image-slice: 0 16 16 0;
-      border-image-source: linear-gradient(-125deg, transparent 13px, #00c26d  0px, #00c26d  calc(100% - 9px), transparent 0px);"
-        src="assets/img/a2.png">
+      <img src="assets/img/a2.png">
     </ion-slide>
     <ion-slide style=" padding: 10px;">
-      <img
-        style="border-style: solid;
-      max-height: 400px;
-      border-width: 0px 16px 16px 0px;
-      border-image-slice: 0 16 16 0;
-      border-image-source: linear-gradient(-125deg, transparent 13px, #00c26d  0px, #00c26d  calc(100% - 9px), transparent 0px);"
-        src="assets/img/a3.png">
+      <img src="assets/img/a3.png">
     </ion-slide>
     <ion-slide style=" padding: 10px;">
-      <img
-        style="border-style: solid;
-      max-height: 400px;
-      border-width: 0px 16px 16px 0px;
-      border-image-slice: 0 16 16 0;
-      border-image-source: linear-gradient(-125deg, transparent 13px, #00c26d  0px, #00c26d  calc(100% - 9px), transparent 0px);"
-        src="assets/img/a4.png">
+      <img src="assets/img/a4.png">
     </ion-slide>
   </ion-slides>
 
@@ -286,7 +268,8 @@
       </ion-card-header>
       <ion-row>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
+          <ion-card
+            style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b1.png">
             <h3 style="
             font-size: 1.125rem;
@@ -306,7 +289,8 @@
           </ion-card>
         </ion-col>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
+          <ion-card
+            style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b2.png">
             <h3 style="
             font-size: 1.125rem;
@@ -322,12 +306,14 @@
             -webkit-box-orient: vertical;">
               Kendini kanıtla
             </h3>
-            <p style="text-align: justify;">Bootcamp, Hackathon ve Hiring Challenge etkinliklerine katılarak hem becerilerini geliştirecek hem de
+            <p style="text-align: justify;">Bootcamp, Hackathon ve Hiring Challenge etkinliklerine katılarak hem
+              becerilerini geliştirecek hem de
               ödül kazanma fırsatı yakalayacaksın..</p>
           </ion-card>
         </ion-col>
         <ion-col size-xs="12" size-md="4">
-          <ion-card style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
+          <ion-card
+            style="text-align: left; max-width: 400px; height: 250px; margin: auto; padding: 10px; overflow: auto;">
             <img style=" max-width: 250px;" src="assets/img/b3.png">
             <h3 style="
             font-size: 1.125rem;
@@ -343,7 +329,8 @@
             -webkit-box-orient: vertical;">
               İş fırsatı yakala
             </h3>
-            <p style="text-align: justify;">Sektöründe lider teknoloji şirketleriyle tanışacak ve iş fırsatları yakalayacaksın.</p>
+            <p style="text-align: justify;">Sektöründe lider teknoloji şirketleriyle tanışacak ve iş fırsatları
+              yakalayacaksın.</p>
           </ion-card>
         </ion-col>
       </ion-row>
@@ -385,7 +372,8 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p style="text-align: justify;">Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim için oldukça keyifli bir
+                <p style="text-align: justify;">Sıcak bir karşılama, eğlenceli ve yoğun bir program ile birlikte benim
+                  için oldukça keyifli bir
                   programdı. Bir çok şey öğrenmenin yanında bootcamp’e katılan farklı ve donanımlı insanlarla tanışma
                   fırsatım oldu. Geriye bakıp düşününce iyi ki katılmışım dediğim bir bootcamp’ti benim için. Emeği
                   geçen herkese teşekkürler 😂.</p>
@@ -414,7 +402,11 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p  style="text-align: justify;">Back-End Bootcamp ile çok eğlenceli ve bilgi dolu bir süreç geçirdim. Bu süreçte eğlendim, arkadaşlıklar edindim ve sektöre yönelik bir çok deneyim kazandım. Hem eğitmenimizin hem de techcareer ekibinin ilgisi ise oldukça yüksekti. Ayrıca bootcamp sonunda ise istediğim pozisyonda işe başladım. Kısacası kariyerimin başında büyük bir etkisi olan çok güzel bir dönem geçirdim diyebilirim. Tüm techcareer.net ekibine teşekkürler.</p>
+                <p style="text-align: justify;">Back-End Bootcamp ile çok eğlenceli ve bilgi dolu bir süreç geçirdim. Bu
+                  süreçte eğlendim, arkadaşlıklar edindim ve sektöre yönelik bir çok deneyim kazandım. Hem eğitmenimizin
+                  hem de techcareer ekibinin ilgisi ise oldukça yüksekti. Ayrıca bootcamp sonunda ise istediğim
+                  pozisyonda işe başladım. Kısacası kariyerimin başında büyük bir etkisi olan çok güzel bir dönem
+                  geçirdim diyebilirim. Tüm techcareer.net ekibine teşekkürler.</p>
               </ion-col>
             </ion-row>
           </ion-card>
@@ -440,7 +432,9 @@
                 -webkit-box-orient: vertical;">
                   adem
                 </h3>
-                <p  style="text-align: justify;">Değerlendirme aşamasından Bootcamp final sunumuna kadar geçen her an çok keyifli ve verimliydi. Çok şey öğrendiğim ve öğrendiklerimi uygulama fırsatı bulduğum dolu dolu bir 6 hafta geçirdim..</p>
+                <p style="text-align: justify;">Değerlendirme aşamasından Bootcamp final sunumuna kadar geçen her an çok
+                  keyifli ve verimliydi. Çok şey öğrendiğim ve öğrendiklerimi uygulama fırsatı bulduğum dolu dolu bir 6
+                  hafta geçirdim..</p>
               </ion-col>
             </ion-row>
           </ion-card>
@@ -471,7 +465,8 @@
             -webkit-box-orient: vertical;">
               Bootcamp
             </h3>
-            <p style="text-align: justify;">Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün yönetimi gibi teknolojik konularda
+            <p style="text-align: justify;">Bootcamp etkinlikleri, yazılım teknolojileri, veri bilimi, ürün yönetimi
+              gibi teknolojik konularda
               düzenlenir. Hem eğitim alabilir, hem de o alanda işe başlayabilecek kadar fazla bilgi ve donanım
               kazanabilirsin.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
@@ -497,7 +492,8 @@
             -webkit-box-orient: vertical;">
               Hackathon
             </h3>
-            <p style="text-align: justify;">Hackathon etkinliklerinde takımlar halinde veya bireysel olarak yarışacaksın. Etkinlik için belli bir
+            <p style="text-align: justify;">Hackathon etkinliklerinde takımlar halinde veya bireysel olarak
+              yarışacaksın. Etkinlik için belli bir
               zaman verilir ve yeni fikirler, yeni dijital ürünler üretmesi, sonra da bunları kodlaması istenir.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
               <strong>Hemen Katılın</strong>
@@ -522,7 +518,8 @@
             -webkit-box-orient: vertical;">
               Hiring Challenge
             </h3>
-            <p style="text-align: justify;">Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod hatası gibi problemleri belirli bir
+            <p style="text-align: justify;">Hiring Challenge yarışmalarında Android, iOS, algoritma veya kod hatası gibi
+              problemleri belirli bir
               zaman aralığı içerisinde çözmeye çalışacaksın. Bu yarışmalarda algoritma tasarımına, özgünlüğe ve kod
               kalitesine göre puan alırsın.</p>
             <ion-button expand="block" fill="clear" shape="round" style="color: #00c26d;">
@@ -565,22 +562,32 @@
       <ion-row>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.CAREER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/about']">{{'HEADER.ABOUT_US' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/all-events']">{{'HEADER.EVENTS' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/for-companies']">{{'HEADER.COMPANIES' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/become-an-instructor']">{{'HEADER.BECOME_AN_INSTRUCTOR' | translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.APPLY' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/bootcamp']">{{'HEADER.BOOTCAMP' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/hackathon']">{{'HEADER.HACKATHON' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round"
+            [routerLink]="['/hiring-challange']">{{'HEADER.HIRING_CHALLANGE' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/jobs']">{{'HEADER.JOBS' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.OTHER' | translate}}</h2>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' | translate}}</ion-button>
-          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' | translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/blog']">{{'HEADER.BLOG' |
+            translate}}</ion-button>
+          <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/podcast']">{{'HEADER.PODCAST' |
+            translate}}</ion-button>
         </ion-col>
         <ion-col style="text-align: center;">
           <h2>{{'HEADER.SOCIAL_MEDIA' | translate}}</h2>
@@ -597,7 +604,7 @@
     <div style="max-width: 1100px; margin: auto;">
       <ion-row>
         <ion-col size="3">
-          <ion-buttons style="text-align: center;" >
+          <ion-buttons style="text-align: center;">
             <ion-button fill="clear" shape="round" color="dark" (click)="changeLanguage('tr')">
               TR
             </ion-button>
