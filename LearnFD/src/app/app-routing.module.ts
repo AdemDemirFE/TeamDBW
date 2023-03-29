@@ -76,6 +76,10 @@ const routes: Routes = [
     path: 'privacy-policy',
     loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
   },
+  {
+    path: 'sms-verification',
+    loadChildren: () => import('./pages/login/sms-verification/sms-verification.module').then( m => m.SmsVerificationPageModule)
+  },
 ];
 
 @NgModule({
