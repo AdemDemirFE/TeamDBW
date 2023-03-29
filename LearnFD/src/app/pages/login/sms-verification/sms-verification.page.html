@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">SMS DOGRULA</ion-title>
+    <ion-button class="iconButton2" slot="end" color="buttonicon" (click)="close()">
+      <img width="30" height="30" src="assets/icon/close.png">
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-color">
+  <ion-grid class="middle_conn">
+    <div>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            SMS KODUNU GİRİNİZ
+          </ion-card-title>
+        </ion-card-header>
+        <ion-list style="margin: 20px;">
+          <ion-img style="width: 150px;" src="assets/icon/sms_icon.gif" class="ion-margin-top"></ion-img>
+          <ion-item color="input" class="form-input">
+            <ion-input [(ngModel)]="girilenSmsKodu" clearInput required="true" type="number"
+              placeholder="Doğrulama Kodu"></ion-input>
+          </ion-item>
+          <ion-button expand="block" class="ion-margin-top" (click)="smsDogrula()">
+            DOGRULA
+          </ion-button>
+        </ion-list>
+      </ion-card>
+    </div>
+  </ion-grid>
+</ion-content>
