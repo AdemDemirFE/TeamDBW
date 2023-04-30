@@ -32,7 +32,7 @@ export let isIosWebView: boolean[] = [false];
 export const account: { kimlikNo?: string, token?: string, type?: number, username?: string, password?: string, cookie?: string, userData?: Kullanici, rememberMe?: boolean} = {
     kimlikNo: '',
     token: '',
-    username: '',
+    username: 'adem',
     cookie: '',
     password: '',
     type: 0,
