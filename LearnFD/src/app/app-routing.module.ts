@@ -80,6 +80,11 @@ const routes: Routes = [
     path: 'sms-verification',
     loadChildren: () => import('./pages/login/sms-verification/sms-verification.module').then( m => m.SmsVerificationPageModule)
   },
+  {
+    path: 'exams',
+    loadChildren: () => import('./pages/exams/exams.module').then( m => m.ExamsPageModule)
+  },
+
 ];
 
 @NgModule({
