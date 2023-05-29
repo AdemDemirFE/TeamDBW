@@ -9,12 +9,13 @@ import { HostListener } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { GeneralSettings, account } from 'src/app/pages';
 
+
 @Component({
-  selector: 'app-my-account',
-  templateUrl: './my-account.page.html',
-  styleUrls: ['./my-account.page.scss'],
+  selector: 'app-exams',
+  templateUrl: './exams.page.html',
+  styleUrls: ['./exams.page.scss'],
 })
-export class MyAccountPage implements OnInit {
+export class ExamsPage implements OnInit {
 
   isMobile: boolean = false;
   isDropdownOtherEvents = false;
